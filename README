@@ -1,0 +1,8 @@
+-Make build
+
+ionic build --prod
+
+
+-Syncing your app with Capacitor
+
+npx cap copy

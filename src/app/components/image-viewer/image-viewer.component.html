@@ -1,0 +1,40 @@
+<ion-content fullscreen>
+	<!-- Floating top start buttons -->
+	<ion-fab vertical="top" horizontal="start" slot="fixed">
+
+		<!-- Close button -->
+		<ion-fab-button (click)="close()" class="close">
+			<ion-icon name="close-sharp"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+
+	<!-- Floating bottom end buttons -->
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+		<!-- Zoom In button -->
+		<ion-row>
+        	<ion-col>
+				<ion-fab-button (click)="zoom(true)">
+					<ion-icon name="add-circle-outline"></ion-icon>
+				</ion-fab-button>
+			</ion-col>
+		</ion-row>
+
+		<!-- Zoom Out button -->
+		<ion-row>
+			<ion-col>
+				<ion-fab-button (click)="zoom(false)">
+					<ion-icon name="remove-circle-outline"></ion-icon>
+				</ion-fab-button>
+			</ion-col>
+		</ion-row>
+	</ion-fab>
+
+	<!-- Image preview -->
+	<ion-slides [options]="slidesOptions" #slides>
+		<ion-slide>
+			<div class="swiper-zoom-container"></div>
+			<img [src]="img">
+		</ion-slide>
+	</ion-slides>
+</ion-content>

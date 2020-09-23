@@ -1,0 +1,19 @@
+ion-content {
+	--background: rgba(44, 39, 45, 0.84);
+}
+
+ion-slides {
+	height: 100%;
+	padding: 3px;
+}
+
+ion-fab-button {
+	ion-icon {
+		font-size: 1.5rem;
+	}
+}
+
+.close {
+	--background: transparent;
+	--box-shadow: none;
+}

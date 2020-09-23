@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="/home"></ion-back-button>
+		</ion-buttons>
+
+		<ion-title>FAQ</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+	<!-- Slider -->
+	<ion-slides [options]="slidesOptions" #slides (ionSlideWillChange)="setActiveElement()">
+		<ion-slide *ngFor="let i of list">
+			<img src="assets/faq/{{i}}.jpg" (click)="previewImage(i)" (load)="detectLastImage(i)">
+		</ion-slide>
+	</ion-slides>
+
+	<!-- Floating bottom end button -->
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-row>
+        	<ion-col>
+
+        		<!-- Previuos button -->
+				<ion-fab-button [disabled]="activeElement == 1" (click)="previuos()">
+					<ion-icon name="caret-back-outline"></ion-icon>
+				</ion-fab-button>
+			</ion-col>
+
+			<ion-col>
+
+				<!-- Next button -->
+				<ion-fab-button [disabled]="activeElement == listLength" (click)="next()">
+					<ion-icon name="caret-forward-outline"></ion-icon>
+				</ion-fab-button>
+			</ion-col>
+		</ion-row>
+	</ion-fab>
+</ion-content>

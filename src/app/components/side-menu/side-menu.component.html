@@ -1,0 +1,36 @@
+<ion-menu side="start" menuId="sidebar" contentId="main" type="overlay">
+	<ion-header>
+		<ion-toolbar color="primary">
+			<ion-title>Menu</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	<ion-content>
+		<ion-list>
+			<ion-item routerLink="/crossroads" (click)="closeSidebar()">
+				<ion-icon slot="start" ios="skull-outline" md="skull-sharp"></ion-icon>
+				<ion-label>Encrucijadas</ion-label>
+			</ion-item>
+
+			<ion-item routerLink="/rules" (click)="closeSidebar()">
+				<ion-icon slot="start" ios="school-outline" md="school-sharp"></ion-icon>
+				<ion-label>Reglas</ion-label>
+			</ion-item>
+
+			<ion-item routerLink="/faq" (click)="closeSidebar()">
+				<ion-icon slot="start" ios="help-circle-outline" md="help-circle-sharp"></ion-icon>
+				<ion-label>FAQ</ion-label>
+			</ion-item>
+
+			<ion-item routerLink="/about" (click)="closeSidebar()">
+				<ion-icon slot="start" ios="information-outline" md="information-sharp"></ion-icon>
+				<ion-label>Acerca De</ion-label>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+	<ion-footer>
+		<ion-toolbar>
+			<ion-note>Version 1.0.0</ion-note>
+		</ion-toolbar>
+	</ion-footer>
+</ion-menu>
